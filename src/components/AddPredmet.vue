@@ -53,8 +53,8 @@ async function handleSubmit() {
   predmetIdErr.value = false
 
   if (!skolskaGodina.value) skolskaGodinaErr.value = 'Skolska godina obavezna'
-  // if (skolskaGodina.value?.length > 7)
-  //   skolskaGodinaErr.value = 'Duzina mora biti manja od 7 karaktera'
+  if (skolskaGodina.value?.length > 7)
+    skolskaGodinaErr.value = 'Duzina mora biti manja od 7 karaktera'
   if (!predmetId.value) predmetIdErr.value = 'Predmet je obavezan'
 
   if (skolskaGodinaErr.value || predmetIdErr.value) return
